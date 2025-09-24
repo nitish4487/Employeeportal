@@ -1,0 +1,22 @@
+# Auto-detect text files and normalize to LF in the repository
+* text=auto
+
+# Force LF for shell scripts, gradle/maven wrappers and yaml files
+*.sh text eol=lf
+mvnw text eol=lf
+gradlew text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Windows batch files keep CRLF
+*.bat text eol=crlf
+
+# Binary files — do not change line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.jar binary
+*.war binary
+*.class binary
+*.exe binary

@@ -1,0 +1,8 @@
+mimg{
+    background-image: url("../public/Manag.PNG");
+    width:350px;
+    height:350px;
+    position:fixed;
+    margin-top:23px;margin-left:52px;
+    padding-left:53px;
+}

@@ -1,0 +1,73 @@
+package com.example.employeeApp.leave;
+
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@CrossOrigin("*")
+@RestController
+@RequestMapping("/leaves")
+public class leaveController {
+
+	@Autowired
+	private LeavesRepository leavesRepository;
+
+	@PostMapping
+	public Leaves createLeave(@RequestBody Leaves leave) {
+		return leavesRepository.save(leave);
+	}
+
+	@GetMapping
+	public List<Leaves> getAllLeaves() {
+		return leavesRepository.findAll();
+	}
+
+	@GetMapping("/leaveId/{id}")
+	public Leaves getLeaveByLeaveId(@PathVariable String id) {
+		Optional<Leaves> leave = leavesRepository.findById(id);
+		return leave.get();
+	}
+
+	@GetMapping("/{applicantId}")
+	public List<Leaves> getLeavesByApplicantId(@PathVariable String applicantId) {
+		return leavesRepository.findLeavesByApplicantId(applicantId);
+	}
+
+	@GetMapping("/manage-leaves/{managerId}")
+	public List<Leaves> getLeavesByManagerId(@PathVariable String managerId) {
+		return leavesRepository.findLeavesByManagerId(managerId);
+	}
+
+	@PutMapping("/{id}")
+	public Leaves updateLeave(@PathVariable String id, @RequestBody Leaves leave) {
+		Leaves new_leave = leavesRepository.findById(id).orElse(null);
+		if (new_leave != null) {
+			new_leave.setApplicantId(leave.getApplicantId());
+			new_leave.setApplicantName(leave.getApplicantName());
+			new_leave.setManagerId(leave.getManagerId());
+			new_leave.setFromDate(leave.getFromDate());
+			new_leave.setToDate(leave.getToDate());
+			new_leave.setReason(leave.getReason());
+			new_leave.setLeaveStatus(leave.getLeaveStatus());
+			return leavesRepository.save(new_leave);
+		} else {
+			return null;
+		}
+	}
+
+	@DeleteMapping("/{id}")
+	public void deleteLeave(@PathVariable String id) {
+		leavesRepository.deleteById(id);
+	}
+}

@@ -1,0 +1,46 @@
+.e1{   
+border: 1px solid rgb(69, 67, 67);
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+left: 0;
+
+right: 0;
+}
+.e2{
+    /* border:2px solid green; */
+    padding-top:20px;
+    margin-top:20px;
+    
+}
+
+.e2 h1{
+    color:rgb(24, 24, 24);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+.e3{
+    border:2px solid rgb(220, 14, 14);
+padding-top: 0px;
+border-radius: 2rem;
+    position: fixed;
+width: 500px;
+margin:12px;
+padding:12px;
+height:400px;
+margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+left: 0;
+right: 0;
+}
+
+.eimg{
+    width:350px;
+    height:350px;
+    position:fixed;
+    margin-top:23px;margin-left:52px;
+    padding-left:53px;
+    border:2px solid rgb(18, 18, 18);
+    
+    background-image: url("../public/emp.PNG");
+}

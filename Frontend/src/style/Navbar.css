@@ -1,0 +1,25 @@
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x:0;
+    --bs-gutter-y: 0; 
+    padding-right: 0px;
+    padding-left: calc(var(--bs-gutter-x) * .5);
+     margin-left: auto;
+}
+  .id1{
+
+    width:100%;
+ margin-left: 0%;
+ margin-right: 0%;
+ padding-left: 0%;
+ padding-right: 0%;
+    overflow: auto;
+  }
+
+ 
+  a:hover{
+    transform: scale(1.1,1.1);
+  }
+  .bg-primary {
+    --bs-bg-opacity: .7;
+    background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
+}

@@ -1,9 +1,0 @@
-package com.example.employeeApp;
-
-import org.springframework.data.mongodb.repository.MongoRepository;
-
-public interface EmployeeRepository extends MongoRepository<Employeemodel,String>  {
-
-	Employeemodel findUserByUserName(String userName);
-
-}

@@ -1,18 +1,17 @@
-# IDE / editor
-.vscode/
-Backend/.metadata/
-Backend/.settings/
+# Java / Spring Boot
+/Backend/employeeApp/target/
+*.class
+*.log
+*.tmp
 *.iml
 
-# node / react
-Frontend/node_modules/
-Frontend/build/
+# Eclipse / IntelliJ
+*.project
+*.classpath
+/.metadata/
+/.idea/
+/.vscode/
 
-# Java / Spring build
-Backend/target/
-**/build/
-
-# OS and misc
-.DS_Store
-Thumbs.db
-*.log
+# React / Node
+/Frontend/node_modules/
+/Frontend/build/

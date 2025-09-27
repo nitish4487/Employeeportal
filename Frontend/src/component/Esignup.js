@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import EmployeeService from '../services/EmployeeService';
 import Navbar from './Navbar';
 import AlertMessage from './Alert';
-import image from "../public/1.svg";
+import image from "../images/1.svg";
 
 export default function Esignup() {
   const [fullName, setFullName] = useState('');

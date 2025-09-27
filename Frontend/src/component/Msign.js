@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import { Link, useNavigate } from 'react-router-dom';
-import image from "../public/103.svg";
+import image from "../images/103.svg";
 import EmployeeService from '../services/EmployeeService';
 
 export default function Msign() {

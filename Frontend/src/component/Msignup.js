@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import EmployeeService from '../services/EmployeeService';
-import image from "../public/103.svg";   
+import image from "../images/103.svg";   
 
 export default function Msignup() {
   const [adminName, setAdminName] = useState('');

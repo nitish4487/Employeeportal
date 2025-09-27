@@ -43,7 +43,7 @@ export default function Employee() {
             }}
           >
             <img
-              src={require("../public/27.png")}
+              src={require("../images/27.png")}
               alt="Employee"
               className="rounded-circle shadow"
               style={{

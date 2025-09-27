@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import EmployeeService from '../services/EmployeeService';
 import Alert from './Alert';
-import image from "../public/sign.svg";
+import image from "../images/sign.svg";
 
 export default function Esign({ setIsLogged }) {
   const [user, setUser] = useState('');
